@@ -10,6 +10,8 @@ const hours = document.querySelector('span[data-hours]');
 const minutes = document.querySelector('span[data-minutes]');
 const seconds = document.querySelector('span[data-seconds]');
 
+btnStart.disabled = true;
+
 const options = {
     enableTime: true,
     time_24hr: true,
@@ -65,7 +67,7 @@ const options = {
             }
           } else {
             Notiflix.Notify.success('Countdown finished');
-            timerHtml.style.color = 'blue';
+            timerHtml.style.color = 'black';
             clearInterval(timer);
           }
         }, 1000);
